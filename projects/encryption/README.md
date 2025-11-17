@@ -71,16 +71,22 @@ Assume that each packet can hold two bytes. Fill in the packet information below
 ## Part 4: Reflection Questions
 
 - What is the difference between symmetric and asymmetric encryption? What purpose did each serve in this simulation?
-symmetric needs a shared secret while assymetric uses public and private keys. Assymetric was used to establish a shared secret while symmetric was used after assymetric for messaging.
+
+Symmetric needs a shared secret while assymetric uses public and private keys. Assymetric was used to establish a shared secret while symmetric was used after assymetric for messaging.
 - Why is it important that this protocol uses a new key for each message?
+
 Because that way if someone somehow manages to get one shared secret they can only decode one message.
 - Why is it important that you never share your secret key?
-because if someone gets your private key theycan listen to your conversations and even change them.
+
+Because if someone gets your private key theycan listen to your conversations and even change them.
 - In the transport layer, do these messages use TCP or UDP? Why?
+
 TCP because you need all the imformation to be accurate for the encryption and decryption to work properly.
 - Now that you've created packets in the transport layer, give a short explanation of what happens to these packets in the internet layer and in the link layer.
-the internet layer routes the packet to their destination while the link layer physically carries the message to its destination using things like wifi or ethernet. 
+
+The internet layer routes the packet to their destination while the link layer physically carries the message to its destination using things like wifi or ethernet. 
 - This protocol successfully encrypts the **content** of the message. Even though and adversary in the middle can't read the content of the message, what other
 information can they still see?
-someone in the middle can still see who you are sending to and when you are sending it.`
+
+Someone in the middle can still see who you are sending to and when you are sending it.`
 
