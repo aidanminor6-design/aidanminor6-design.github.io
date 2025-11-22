@@ -1,0 +1,15 @@
+body {background-color:#c4f9f5;
+	table, tr , th, td{
+	border: black 1px solid;
+	border-collapse: collapse;			
+	background-color : #11999e;
+}
+#info{
+	background-color: #30e3ca;
+}
+.highlight{
+	background-color: #40514e;
+}
+#zoo{
+	text-decoration: underline;
+}
