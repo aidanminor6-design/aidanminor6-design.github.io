@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+                <title>Who wants ice cream??</title>
+		<script src="../../js/validate.js"></script>
+        </head>
+        <body>
+       	<form action="https://httpbin.org/post" method="post">
+
+			<input type="text" name="email" required>
+				What is your email address
+		<br>
+		<br>
+			<input type="text" name="phone" required>
+				What is your phone number
+		<br>
+		<br>
+			<input type="text" name="people" required>
+				How many people will you bring with you to the party
+		<br>
+
+		<p>What is your favorite flavor of ice cream?</p>
+			  <label for="vanilla">Vanilla</label>
+  <input type="radio" id="vanilla" name="flavor" value="vanilla">
+  <br>
+  <label for="chocolate chip">Chocolate Chip</label>
+  <input type="radio" id="chocolate chip" name="flavor" value="chocolate chip">
+  <br>
+  <label for="strawberry">Strawberry</label>
+  <input type="radio" id="strawberry" name="flavor" value="strawberry">
+  <br>
+  <label for="other">Other</label>
+  <input type="radio" id="other" name="flavor" value="other">
+  <br>
+  <p>Which toppings do you like?</p>
+	  <label for="Sprinkles">Sprinkles</label>
+  <input type="checkbox" id="sprinkles" name="Sprinkles">
+  <br>
+  <label for="Magic Shell">Magic Shell</label>
+  <input type="checkbox" id="Magic Shell" name="Magic Shell">
+  <br>
+  <label for="Chocolate Chips">Chocolate Chips</label>
+  <input type="checkbox" id="Chocolate Chips" name="Chocolate Chips">
+  <br>
+  <label for="Gummy Bears">Gummy Bears</label>
+  <input type="checkbox" id="Gummy Bears" name="Gummy Bears">
+  <br>
+  <label for="Other">Other</label>
+  <input type="checkbox" id="Other" name="Other">
+  <br>
+  <br>
+  <p>What kind of entertainment should we have at the party?</p>
+<select id="Entertainment" name="Entertainment">
+  <option value="Balloon Animals">Balloon Animals</option>
+  <option value="Bounce House">Bounce House</option>
+  <option value="Clown">Clown</option>
+  <option value="Cornhole">Cornhole</option>
+  <option value="DJ">DJ</option>
+  <option value="Face Painting">Face Painting</option>
+  <option value="Magician">Magician</option>
+</select>
+<br>
+<br>
+			<input type="text" name="comments">
+				Do you have any other suggestions or comments?
+				<br>
+				<br>
+		<button type="submit">Submit</button>
+	</form>
+        </body>
+</html>
