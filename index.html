@@ -2,25 +2,18 @@
 <html lang ="en">
 	<head>
 		<title>Homepage</title>
-<style>
-body{
-	background-color: lightgreen;
-}
-</style>
+		<link rel="stylesheet" href="style.css">
 <script src="js/validate.js"></script>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 	</head>
 	<body>
 		<p> This is My First Website</p>
 		<q>"It's over Anakin I have the highground."<cite> Star Wars:   Episode III – Revenge of the Sith</cite></q>
-		<img src="images/MonkeySelfieSmall.jpg"
-		     alt="A Monkey Selfie"
-		     srcset="images/MonkeySelfieSmall.jpg 240w,
-			     images/MonkeySelfieMedium.jpg 463w,
-			     images/MonkeySelfieLarge.jpg 740w"
-		     sizes="(max-width: 480px) 95vw,
-		            (max-width: 800px) 45vw,
-     			    30vw">
+		<img src="images/MonkeySelfieLarge.jpg"  alt="A Monkey Selfie" usemap="#image-map">
+		<map name="image-map">
+    <area target="_blank" alt="Monkey selfie" title="Monkey selfie" href="https://www.npr.org/sections/thetwo-way/2017/09/12/550417823/-animal-rights-advocates-photographer-compromise-over-ownership-of-monkey-selfie" coords="401,412,33" shape="circle">
+</map>
+		    
 			<!--https://en.wikipedia.org/wiki/Monkey_selfie_copyright_dispute-->
 	</body>									
 </html>
