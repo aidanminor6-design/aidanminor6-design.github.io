@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title>Canvas</title>
+		<script src="../../js/validate.js"></script>
+<style>
+canvas{
+	border:black 1px solid;
+
+}
+</style>
+        </head>
+        <body>
+                <h1>Canvas</h1>
+		<canvas id="canvas" width="800" height="800">
+			<script>
+				const canvas = document.getElementById("canvas");
+				const ctx = canvas.getContext("2d");
+
+				//Purple Ellipse
+				ctx.fillStyle = "purple";
+				ctx.strokeStyle = "green";
+				ctx.lineWidth=40;
+				ctx.beginPath();
+				ctx.ellipse(400,400,200,300,Math.PI/6,0,2*Math.PI);
+				ctx.stroke();
+				ctx.fill();
+
+				ctx.beginPath();
+				ctx.moveTo(750,50);
+				ctx.lineTo(775,150);
+				ctx.lineTo(725,150);
+				ctx.lineTo(750,50);
+				ctx.stroke();
+				ctx.fill();
+			</script>
+		</canvas>
+        </body>
+	</html>
