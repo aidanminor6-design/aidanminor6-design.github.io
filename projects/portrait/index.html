@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title>Aidans Portait</title>
+		<script src="../../js/validate.js"></script>
+        </head>
+        <body>
+		<canvas id="canvas" width="800" height="800">
+			<script>
+				const canvas = document.getElementById("canvas");
+				const ctx = canvas.getContext("2d");
+
+				//Background
+				ctx.fillStyle = "#e6f5e6";
+				ctx.fillRect(0,0,800,800)
+
+				//Hair
+				ctx.fillStyle = "#633400";
+				ctx.beginPath();
+				ctx.ellipse(400,250,170,200,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Basic Face Shape
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(400,300,170,200,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Right Ear
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(240,285,50,75,0,0,2*Math.PI);
+				ctx.fill();
+
+				//left ear
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(560,285,50,75,0,0,2*Math.PI);
+				ctx.fill()
+
+				//Nose
+				
+				</script>
+		</canvas>
+        </body>
+	</html>
