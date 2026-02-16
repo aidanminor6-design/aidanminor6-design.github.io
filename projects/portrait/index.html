@@ -39,7 +39,32 @@
 				ctx.fill()
 
 				//Nose
-				
+				ctx.strokeStyle = "#000000";
+				ctx.lineWidth=3;
+				ctx.beginPath();
+				ctx.moveTo(400,275);
+				ctx.lineTo(375,350);
+				ctx.lineTo(425,350);
+				ctx.stroke();
+
+				//Left Eye
+				ctx.fillStyle = "#ffffff";
+				ctx.strokeStyle = "#000000";
+				ctx.lineWidth=2;
+				ctx.beginPath();
+				ctx.ellipse(315,250,40,25,0,0,2*Math.PI);
+				ctx.stroke();
+				ctx.fill();
+
+				ctx.fillStyle = "#7B5000";
+				ctx.beginPath();
+				ctx.ellipse(315,250,25,25,0,0,2*Math.PI);
+				ctx.fill();
+
+				ctx.fillStyle = "#000000";
+				ctx.beginPath();
+				ctx.ellipse(315,250,10,10,0,0,2*Math.PI);
+				ctx.fill();
 				</script>
 		</canvas>
         </body>
