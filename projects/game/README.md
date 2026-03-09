@@ -10,13 +10,13 @@ Alexandria regional FRC First Chesapeake District where team 8230 KoiBots from A
 
 ```mermaid
 graph TD;
-    (((Outside)))<-->Inside;
+    outside(((Outside)))<-->Inside;
     Inside<-->Stands;
     Inside<-->Pits;
-    Inside<-->Concession Stand;
-    Pits<-->Koibots Pit;
-    Pits<--> Titan Robotics Pit;
-    Stands<-->Koibots Stands Section;
+    Inside<-->ConcessionStand;
+    Pits<-->KoibotsPit;
+    Pits<--> TitanRoboticsPit;
+    Stands<-->KoibotsStandsSection;
     Stands<-->Pits;
     Stands<-->Awards;
 ```
