@@ -19,6 +19,7 @@ graph TD;
     Stands<-->KoibotsStandsSection;
     Stands<-->Pits;
     Stands<-->Awards;
+    Stands<-->ConcessionStand;
 ```
 
 #Story
