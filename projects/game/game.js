@@ -1,8 +1,7 @@
 let gameActive = true; //this variable is required. 
                        //to stop the game, set it to false.
 // Gobal Variables
-let haveEaten = false;
-let matchNumber = 60;                                             
+let matchNumber = 0;                                             
 let swerveModuleBroken = false;                            
 
 //If you need, add any "helper" functions here
@@ -10,17 +9,17 @@ let swerveModuleBroken = false;
 
 //Make one function for each location
 function outside() {
-    clear();
+    clear()
     print("\nYou are outside hayfeild secondary school!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationB");
+        "\ninside");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationb") {
-            locationB();
+        if (input.toLowerCase() === "inside") {
+            inside();
         } else {
             stayHere();
-            waitThenCall(locationA);
+            waitThenCall(outside);
         }
     }
     waitForInput(processInput);
@@ -30,14 +29,20 @@ function inside() {
     clear();
     print("\nYou are inside the school!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\tpits\n\tstands\n\tconcession stand\n\toutside");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "pits") {
+            pits();
+        } else if (input.toLowerCase() === "stands") {
+            stands();
+        } else if (input.toLowerCase() === "concession stand") {
+            concession_stand();
+        } else if (input.toLowerCase() === "outside") {
+            outside();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(inside);
         }
     }
     waitForInput(processInput);
@@ -46,14 +51,16 @@ function pits() {
     clear();
     print("\nYou are in the pits!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\tstands\n\tinside");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "stands") {
+            stands();
+        } else if (input.toLowerCase() === "inside") {
+            inside();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(pits);
         }
     }
     waitForInput(processInput);
@@ -61,14 +68,20 @@ function pits() {
     clear();
     print("\nYou are in the Stands!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\tpits\n\tconcession stand\n\tinside");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
-        } else {
+        if (input.toLowerCase() === "pits") {
+            pits();
+        } else if (input.toLowerCase() === "awards") {
+            awards();
+        } else if (input.toLowerCase() === "concession stand") {
+            concessionstand();
+        } else if (input.toLowerCase() === "inside") {
+            inside();
+        }
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(stands);
         }
     }
     waitForInput(processInput);
@@ -76,74 +89,31 @@ function pits() {
     clear();
     print("\nYou are at Awards!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\nstands");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "stands") {
+            stands();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(awards);
         }
     }
     waitForInput(processInput);
-}function koibotsStandsSection() {
-    clear();
-    print("\nYou are in the Koitbots stand area!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
-        } else {
-            stayHere();
-            waitThenCall(locationB);
-        }
-    }
-    waitForInput(processInput);
-}function concessionStand() {
+}function concessionstand() {
     clear();
     print("\nYou are at the Concession Stand!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\tstands\n\tinside");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "stands") {
+            stands();
+        } else if (input.toLowerCase() === "inside") {
+            inside();
         } else {
             stayHere();
-            waitThenCall(locationB);
-        }
-    }
-    waitForInput(processInput);
-}function koitbotsPits() {
-    clear();
-    print("\nYou are in the Koibots Pit!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
-        } else {
-            stayHere();
-            waitThenCall(locationB);
-        }
-    }
-    waitForInput(processInput);
-}function titanRoboticsPit() {
-    clear();
-    print("\nYou are in the Titan Robotics pit!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
-        } else {
-            stayHere();
-            waitThenCall(locationB);
+            waitThenCall(concessionstand);
         }
     }
     waitForInput(processInput);
@@ -152,10 +122,17 @@ function pits() {
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
-    print("Welcome to my game! Press any key to start");
-
+    clear();
+    print("\nWelcome to Hayfelid Secondary.");
+	print("You are on the Koibots robotics team and are here to make it far into the competition here at Hayfeild.");
+	print("\nTo exit the car, type Start");
     function processInput(input){
-            locationA();
+	if (input.toLowerCase() === "start") {
+            outside();
+        } else {
+            print("\nThats not an option.");
+            print("\nYou're going to have to leave the car, they need your help.");
+            print("\nTo leave the car, type Start");
+        }
     }
-    waitForInput(processInput);
 }
