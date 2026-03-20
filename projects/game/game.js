@@ -63,8 +63,9 @@ function pits() {
             waitThenCall(pits);
         }
     }
+}
     waitForInput(processInput);
-}function stands() {
+function stands() {
     clear();
     print("\nYou are in the Stands!");
     print("\nWhere do you want to go next? Say one of these choices:" +
@@ -79,13 +80,15 @@ function pits() {
             concessionstand();
         } else if (input.toLowerCase() === "inside") {
             inside();
-        }
+        } else {
             stayHere();
             waitThenCall(stands);
         }
-    }
+	}
+}
+    
     waitForInput(processInput);
-}function awards() {
+function awards() {
     clear();
     print("\nYou are at Awards!");
     print("\nWhere do you want to go next? Say one of these choices:" +
