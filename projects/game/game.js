@@ -3,7 +3,7 @@ let gameActive = true; //this variable is required.
 // Gobal Variables
 let matchNumber = 0;                                             
 let swerveModuleBroken = false;                            
-
+let award = false;
 //If you need, add any "helper" functions here
 
 
@@ -90,7 +90,8 @@ function stands() {
     waitForInput(processInput);
 function awards() {
     clear();
-    print("\nYou are at Awards!");
+    print("\nYou are at Awards!" +
+    );
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\nstands");
     
@@ -105,7 +106,8 @@ function awards() {
     waitForInput(processInput);
 }function concessionstand() {
     clear();
-    print("\nYou are at the Concession Stand!");
+    print("\nYou are at the Concession Stand!" +
+    "You decide that a slice of pizza sounds tasty and grab a slice to refuel");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tstands\n\tinside");
     
