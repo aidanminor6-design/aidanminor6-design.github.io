@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sebastian's Portfolio - Contact Me</title>
+
+		<link rel="icon" href="Images/favicon.png" type="image/png">
+		<link rel="stylesheet" href="style.css" type="text/CSS">
+	</head>
+	<body>
+		<span id="top"></span>
+		<div id="navbar">
+            <a id="icons" href="/">
+			    <img src="Images/favicon.png" height="90%" alt="Favicon" id="icon">
+			    <span id="iconText">Sebastian Seguin</span>
+            </a>
+            
+			<div id="labels">
+				<a href="/">Home</a>
+                <a href="/contact.html">Contact Me</a>
+                <a href="/art.html">Art</a>
+			</div>
+		</div>
+
+        <script>
+            function openForm() {
+                document.getElementById("form").style.display = "block";
+                document.getElementById("blur").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("booking").style.display = "none";
+                document.getElementById("form").style.display = "none";
+            }
+        </script>
+
+        <div id="blur"></div>
+        <div class="center">
+            <form action="https://formsubmit.co/sebastiannmseguin@gmail.com" method="POST" id="form"> <!--Code for the form-->
+                <button id="close" type="reset" onclick="closeForm()">X</button>
+
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" required><br>
+
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="desc">Breif Description of Website:</label><br>
+                <textarea id="desc" name="desc" required></textarea><br>
+                <br>
+
+                <button type="submit" onclick="closeForm()">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+
+        <h1>Contact Me</h1>
+
+        <h2>Why to Contact Me:</h2>
+        <p>You may want to put up a website of your own, and for that, you may purchase my services to have your own website made just for you! As for why to choose me in particular, just look at the websites I have made and see how well and skillfully made they are.</p>
+
+        <div class="center">
+			<div id="bigPhoto">
+				<img src="Images/me.jpg" alt="An image of me." id="meImage">
+			</div>
+		</div>
+
+        <br><br>
+        <div class="center">
+            <button onclick="openForm()">Contact Form</button>
+        </div>
+
+        <br><br><br>
+		<footer>
+            <div id="ftrgrid">
+                <div id="area1">
+                    <p>Author: Sebastian Seguin</p>
+                    <p><a href="mailto:sebastiannmseguin@gmail.com">sebastiannmseguin@gmail.com</a></p>
+                </div>
+                <div id="area2">
+                    <p>Website made by <a href="mailto:sebastiannmseguin@gmail.com">sebastiannmseguin@gmail.com</a></p>
+                    <p><a href="#top">Back to top</a></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

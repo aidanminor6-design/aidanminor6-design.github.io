@@ -1,1 +1,119 @@
-body {background-color: lightgreen;
+body {
+    margin-top: 80px;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #fbf2c4;
+}
+
+link {
+    font-weight: bold;
+    color: #e5c185;
+    cursor: pointer;
+}
+
+h2 {
+    margin-left: 15px;
+}
+
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#largePhoto {
+    border: 4px solid #137098;
+    background-color: #008585;
+    width: 60%;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#selfie {
+    margin: 5%;
+    width: 90%;
+}
+
+#header {
+    height: 60px;
+    background-color: #008585;
+    width: 100vw;
+    display:grid;
+    grid:
+        'icons labels' 60px
+        /34% 66%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid #137098;
+    z-index: 10;
+}
+
+#icons {
+    grid-area: icons;
+}
+
+#icon {
+    margin: 2.5px;
+    margin-left: 5px;
+}
+
+#iconText {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    left: 95px;
+    color: #e5c185;
+    top: 16px;
+}
+
+#label {
+    grid-area: labels;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 30px;
+    margin-right: 45px;
+}
+
+#labelLink {
+    font-size: 18px;
+    color: #e5c185;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    position: absolute;
+    background-color: #008585;
+    width: 100vw;
+    height: 175px;
+    color: #e5c185;
+    left: 0;
+    text-align: center;
+    border-top: 4px solid #137098;
+    font-size: 17px;
+}
+
+footer link {
+    color: #e5c185;
+    text-decoration: underline;
+}
+
+#grid {
+    display: grid;
+    grid:
+        'sct1 sct2' 100%
+        /1fr 1fr;
+    margin-top: 30px;
+}
+
+#begining {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 0;
+    background-color: transparent;
+}
